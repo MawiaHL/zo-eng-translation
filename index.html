@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html LANG="EN">
+	<head>
+			<title>MIZO-ENGLISH Dictionary</title>
+			<style>
+			body {
+				background-color: Silver;
+				margin:200px;
+				margin-top: 10px;
+				}
+				#chhan {
+				   background-color: #E6E6FA;
+					border-color: Black;
+					border-style: ridge;
+					margin:20px;	
+				}
+			</style>
+				<script type="text/javascript">
+							function zawnNa(zawnber){
+								if (zawnber.length==0) { 
+				    				document.getElementById("chhanna").innerHTML="";
+				    				return;
+								} else {
+				    			var xmlhttp=new XMLHttpRequest();
+				    			xmlhttp.onreadystatechange=function() {
+				        		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				            	document.getElementById("chhanna").innerHTML=xmlhttp.responseText;
+				        		}
+				    		}
+				    xmlhttp.open("GET","lakchhuahna.php?thumal="+zawnber,true);
+				    xmlhttp.send();
+					}    
+				}
+			</script>
+	</head>
+		<body>
+			<div align="center">
+				<form action=""> 
+					<label for="thumal">Thumal Chhutna</label>: 
+					<input type="text" id="thumal" onkeyup="zawnNa(this.value)" size="20">
+				</form>
+					<p>Entirna: <b>hmangaih</b> <em>tih type la</em></p>
+				<div id="chhan"> <span id="chhanna"></span> </div>
+			</div>
+		</body>
+</html>
+
+
+
