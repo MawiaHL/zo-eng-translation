@@ -1,0 +1,36 @@
+MIZO-ENGLISH TRANSLATION APPLICATION Using PHP SQLLITE
+
+KAMKEUNA
+
+Han en maia a chhiar nawmna thu hlaah chuan XML hi JSON hian a la tluk lovin ka hria. Nasa takin JSON hian XML hi kawng engkimah a luahlan chho tawh a, facebook, twitter, google leh a dang ho pawh hian XML aiin JSON hi data exchange format tan an hmang vek tawh a, chutih rualin ATOM, RSS Feeds, REST-SOAP API te hian XML hi an la hmang ve tho bawk. Tun tumah hian Database hmang bawk si XML hmang bawk siin ONLINE MIZO-ENGLISH TRANSLATION APPLICATION project kan buai ve dawn nge (ka hman bawk a).
+
+Hmanhmawh taka ka siam avangin belh leh paih ngai a tam hle ang tih chu hriatsa. A bul han tan hrim hrim hi engkimah a buaithlak ve a, zirtir te tan a ni ang. A zawng thiam fa tan chuan Internet-ah hian hetiang siam theihna thiam thil chu a tam hle mai; mah se Mizo tawngin a inziak lem lo va, technical term hmelhriat tam lem lo tan chuan chhiar ninawm leh mut tichhuak mai an ni.
+
+PROJECT SAWIFIAHNA
+
+He project hi project ho leh mawlmang tak a ni phawt a. Database-ah thumal leh a sawifiahna (definition) dahsa vek tur a ni a, chu chu XML-a chantir leh tur a ni a, hei hi Sharing atan te a that bik vang a ni. I database connection detail(mysql database i lo hmang ta a nih chuan) pe kher lo pawhin i translation application data.xml file hi i thian te i share thei a, an duh danin an application-ah a interface an lo siam ve tawh mai dawn a ni. Tuna mi hian sqllite 3.8.6 a hmang a, a duh tan mysql-ah awlsam taka siam theih a ni bawk a, a hmang tur te'n firefox sqllite extension (addon) hmanga awlsam taka an setup theih nana dah ka ni. Awle hei hi nia API tia an sawi huai huai chu. Tichuan Front-End-ah chuan Thumal (Mizo tawng English lehlin tur) chhutna input field pakhat a awm ang a, i chhutluh rual rualin a English version chu a lo lang zel mai dawn a ni.
+
+DATABASE CHUNGCHANG
+Mysql database hmang duh te chuan mysql connection code dsn.php-ah hian dahsa vek a ni bawk a. A hnuaia mi ang hian database (zotranslation) chu siam tur a ni ang.
+CREATE TABLE IF NOT EXISTS `zotab` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `thumal` varchar(255) NOT NULL,
+  `sawifiahna` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+--
+-- Dumping data for table `zotab`
+--
+INSERT INTO `zotab` (`id`, `thumal`, `sawifiahna`) VALUES
+(1, 'Pitzerh', 'Mizo tawnga email sawina'),
+(2, 'Vihlawr', '<b>n</b>. Mizo Tawnga Pendrive sawina. He tawngkam hi kum 2000 hnu lama mi a ni nghe nghe a.<br>');
+
+PROJECT FILES
+
+1. index.html
+2. data.php (Database-a thil i dahthar  apiangin hei hi hawn tur.)
+3. data.xml
+4. lakchhuahna.php
+
+LICENSE
+He application hi Mizo Web Developer and Designer Facebook group te chuan a thlawnin in hmang thei a. In duh dan ang takin develop kual ula, chutih rualin Mawia HL hi lo hre ve reng ula...hehe.
